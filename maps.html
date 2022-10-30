@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+</head>
+<body>
+  <div> {{ map | safe }}</div>
+    <div>
+        <form action="tostation" method="post">{% csrf_token %}
+           <table style="margin: auto">
+
+                <tr>
+                    <td>
+                        请输入租车点编号：
+                    </td>
+                    <td>
+                        <input type="text" id="loc111" name="loc" placeholder="" autofocus required  />
+                    </td>
+                    <td>
+                        <input type="submit" value="确认租车点" >
+                    </td>
+
+                    <td>
+                        <button onclick="window.location.href = 'recharge'">充值</button>
+                    </td>
+                </tr>
+           </table>
+
+        </form>
+    </div>
+</body>
+</html>
